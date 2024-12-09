@@ -1,0 +1,166 @@
+/* RESET de Margens e Padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    color: #2a8cb9;
+    background-color: #666eb6; /* Cor de fundo bem suave */
+}
+
+/* Header e Navegação */
+header {
+    background: linear-gradient(135deg, #6297c9, #5a9abb); /* Gradiente de azul suave */
+    padding: 20px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-bottom: 2px solid #f1f1f1; /* Linha de separação sutil */
+    color: #fff; /* Texto claro para contraste */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1000;
+}
+
+/* Media Query para telas pequenas */
+@media (max-width: 768px) {
+    .sobre-container img {
+        display: none; /* Esconde a imagem em telas menores que 768px */
+    }
+}
+
+header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5em;
+    color: #81b3e4;
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    font-size: 1.4em;
+    color: rgb(21, 46, 99);
+    text-decoration: none;
+    margin: 0 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+}
+
+nav a:hover {
+    color: #484abd; /* Cor de destaque para o hover */
+}
+
+/* Seção sobre o Evento com Flexbox */
+.sobre-container {
+    display: flex; /* Flexbox para colocar os elementos lado a lado */
+    justify-content: space-between; /* Espaço entre imagem e texto */
+    align-items: center; /* Alinha verticalmente */
+    padding: 60px 20px;
+    background-color: #f7fafc; /* Cor de fundo suave */
+    text-align: left;
+    color: #81b3e4;
+}
+
+.sobre-container img {
+    width: 45%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: block;
+    opacity: 0.5;
+    object-fit: cover;
+    transform: translateX(100px);
+}
+
+.sobre-container .sobre-texto {
+    width: 50%; /* Texto ocupa a outra metade do espaço */
+    text-align: center;
+}
+
+.sobre-container .sobre-texto h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.sobre-container .sobre-texto p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: black;
+}
+
+.sobre-container .sobre-texto .btn {
+    background-color: #73b2ee;
+    padding: 15px 30px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin-top: 30px;
+    display: inline-block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sobre-container .sobre-texto .btn:hover {
+    background-color: #2346df;
+}
+
+.programacao {
+    background-color: #e7f7fc;
+    padding: 50px 15px;
+    text-align: center;
+    display: flex; /* Flexbox para colocar os cards lado a lado */
+    flex-wrap: wrap; /* Permite que os cards que não cabem se movam para a linha seguinte */
+    justify-content: space-between; /* Espaça os cards de maneira uniforme */
+}
+
+.programacao h2 {
+    font-size: 2.4em;
+    color: #81b3e4;
+    margin-bottom: 30px;
+    width: 100%; /* Para garantir que o título ocupe toda a largura */
+}
+
+.evento {
+    background-color: #f0faff;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 80%; /* Limita a largura dos cards para que caibam dois por linha */
+    flex: 1 1 48%; /* Garante que os cards ocupem 48% da largura disponível */
+}
+
+.evento h3 {
+    font-size: 1.8em;
+    color: #76c7f4;
+    margin-bottom: 10px;
+}
+
+.evento p {
+    font-size: 1.1em;
+    margin: 5px 0;
+    color: #333;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .evento {
+        max-width: 100%; /* Para telas pequenas, os cards ocuparão 100% da largura */
+        flex: 1 1 100%; /* Faz com que os cards ocupem 100% da largura */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+}
